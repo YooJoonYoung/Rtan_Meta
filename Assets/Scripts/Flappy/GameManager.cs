@@ -14,14 +14,13 @@ public class GameManager : MonoBehaviour
 
     private int currentScore = 0;
 
-    UIManager uiManager;
 
-    public UIManager UIManager { get { return uiManager; } }
+ 
 
     private void Awake()
     {
         gameManager = this;
-        uiManager = FindObjectOfType<UIManager>();
+        
 
     }
     private void Start()
