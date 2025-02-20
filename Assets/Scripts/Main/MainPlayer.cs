@@ -49,6 +49,8 @@ public class MainPlayer : MonoBehaviour //캐릭터의 기본 동작 제어
         if (collision.gameObject.CompareTag("Portal"))
         {
             Debug.Log("Portal 충돌!");
+
+            SceneManager.LoadScene("Flappy");
             // 충돌 시 flappy scene으로 넘어가도록
             //SceneManager.LoadScene("Flappy");
         }
