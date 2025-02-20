@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     private int currentScore = 0;  // 현재 점수를 저장할 변수
     private int highScore = 0;  // 최고 점수를 저장할 변수
+    private bool isGameOver = true;  // 게임 오버 상태를 추적하는 변수
 
 
     private void Awake()
@@ -43,11 +44,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("High Score: " + highScore);  // 게임 오버 후 최고 점수 출력
 
     }
+    public void StartGame()
+    {
+        // 점수 초기화
+        currentScore = 0;
+        isGameOver = false;
+
+        Debug.Log("Game Started");
+    }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        currentScore = 0;  // 게임 재시작 시 점수 초기화
+        
+
+        // 게임 오버 상태 해제
+        isGameOver = false;
+
     }
 
     public void AddScore(int score)
