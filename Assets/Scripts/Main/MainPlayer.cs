@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainPlayer : MonoBehaviour //캐릭터의 기본 동작 제어
 
@@ -49,6 +50,7 @@ public class MainPlayer : MonoBehaviour //캐릭터의 기본 동작 제어
         {
             Debug.Log("Portal 충돌!");
             // 충돌 시 flappy scene으로 넘어가도록
+            //SceneManager.LoadScene("Flappy");
         }
     }
 }

@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 1197576265}
   m_Layer: 0
   m_Name: Portal_Flappy
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -866,7 +866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd934e6cc127b0c4db3771cc1133f480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalName: MiniGame_flappy
 --- !u!1 &1503152223
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503152224}
   - component: {fileID: 1503152225}
+  - component: {fileID: 1503152226}
   m_Layer: 0
   m_Name: MainSprite
   m_TagString: Untagged
@@ -893,8 +893,8 @@ Transform:
   m_GameObject: {fileID: 1503152223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2114029061}
@@ -951,6 +951,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1503152226
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503152223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d909f9f0288ca744e9f4eb6ebf716d4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1530697620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,37 +2107,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1677572579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1677572580}
-  m_Layer: 0
-  m_Name: WeaponPivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1677572580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677572579}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2114029061}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772926881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,7 +2502,7 @@ GameObject:
   - component: {fileID: 2114029061}
   - component: {fileID: 2114029060}
   - component: {fileID: 2114029059}
-  - component: {fileID: 2114029062}
+  - component: {fileID: 2114029063}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2563,7 +2553,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.31, y: 0.4}
   m_EdgeRadius: 0
 --- !u!50 &2114029060
 Rigidbody2D:
@@ -2606,10 +2596,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1503152224}
-  - {fileID: 1677572580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2114029062
+--- !u!114 &2114029063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2618,11 +2607,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114029058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113308575c1862c46ababe9d706da1e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c5bcd2813103ce4794eb5b4560420bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterRenderer: {fileID: 1503152225}
-  weaponPivot: {fileID: 1677572580}
+  moveSpeed: 5
 --- !u!1 &2127454656
 GameObject:
   m_ObjectHideFlags: 0
